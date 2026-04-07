@@ -18,11 +18,14 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install python-pptx Pillow requests
 
+      # --- Download latest AWS Architecture icon PNGs ---
       - name: Download AWS Architecture Icons (2023)
         run: |
           mkdir -p aws_icons_2023
+          echo "Downloading AWS icons..."
           curl -L -o aws_icons_2023/API-Gateway.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/API-Gateway.png)
           curl -L -o aws_icons_2023/Application-Load-Balancer.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Application-Load-Balancer.png)
           curl -L -o aws_icons_2023/ECS.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Elastic-Container-Service.png)
@@ -38,12 +41,23 @@ jobs:
           curl -L -o aws_icons_2023/Certificate-Manager.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/AWS-Certificate-Manager.png)
           curl -L -o aws_icons_2023/Transit-Gateway.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Transit-Gateway.png)
           curl -L -o aws_icons_2023/Firewall-Manager.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Firewall-Manager.png)
+          echo "Verify downloaded files:" && ls -1 aws_icons_2023
 
+      # --- Run the PowerPoint builder ---
       - name: Run PowerPoint builder
         run: |
+          echo "--- Verify Python ---"
+          python --version
+          echo "--- Installed packages ---"
+          pip list
+          echo "--- Icon folder contents ---"
+          ls -l aws_icons_2023 || echo "⚠ aws_icons_2023 missing"
+          echo "--- Run script ---"
           python create_cloud_architecture_pptx.py
 
+      # --- Upload result if script succeeded ---
       - name: Upload PPTX artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: Cloud_Example_Diagram
