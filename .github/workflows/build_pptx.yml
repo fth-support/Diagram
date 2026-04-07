@@ -1,0 +1,31 @@
+name: Build Cloud Diagram PPTX
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install python-pptx Pillow
+
+      - name: Run PowerPoint builder
+        run: |
+          python create_cloud_architecture_pptx.py
+
+      - name: Upload PPTX as Action artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cloud_Example_Diagram
+          path: Cloud_Example_Diagram.pptx
