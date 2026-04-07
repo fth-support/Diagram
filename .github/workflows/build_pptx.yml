@@ -20,7 +20,7 @@ jobs:
         run: |
           pip install python-pptx Pillow requests
 
-      - name: Download AWS Architecture Icons
+      - name: Download AWS Architecture Icons (2023)
         run: |
           mkdir -p aws_icons_2023
           curl -L -o aws_icons_2023/API-Gateway.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/API-Gateway.png)
@@ -43,7 +43,7 @@ jobs:
         run: |
           python create_cloud_architecture_pptx.py
 
-      - name: Upload PPTX
+      - name: Upload PPTX artifact
         uses: actions/upload-artifact@v4
         with:
           name: Cloud_Example_Diagram
