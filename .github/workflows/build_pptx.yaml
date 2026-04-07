@@ -42,8 +42,6 @@ jobs:
           curl -L -o aws_icons_2023/Transit-Gateway.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Transit-Gateway.png)"
           curl -L -o aws_icons_2023/Firewall-Manager.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Firewall-Manager.png)"
           echo "✅ Icons downloaded:" && ls -1 aws_icons_2023
-
-
       # --- Run the PowerPoint builder ---
       - name: Run PowerPoint builder
         run: |
