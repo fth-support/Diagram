@@ -26,22 +26,23 @@ jobs:
         run: |
           mkdir -p aws_icons_2023
           echo "Downloading AWS icons..."
-          curl -L -o aws_icons_2023/API-Gateway.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/API-Gateway.png)
-          curl -L -o aws_icons_2023/Application-Load-Balancer.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Application-Load-Balancer.png)
-          curl -L -o aws_icons_2023/ECS.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Elastic-Container-Service.png)
-          curl -L -o aws_icons_2023/RDS-PostgreSQL.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Amazon-RDS-Instance.png)
-          curl -L -o aws_icons_2023/ElastiCache-Redis.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Amazon-ElastiCache.png)
-          curl -L -o aws_icons_2023/S3.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Amazon-S3.png)
-          curl -L -o aws_icons_2023/WAF.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/AWS-WAF.png)
-          curl -L -o aws_icons_2023/ECR.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Elastic-Container-Registry.png)
-          curl -L -o aws_icons_2023/Secrets-Manager.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Secrets-Manager.png)
-          curl -L -o aws_icons_2023/Systems-Manager-Parameter-Store.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Systems-Manager-Parameter-Store.png)
-          curl -L -o aws_icons_2023/CloudWatch.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/CloudWatch.png)
-          curl -L -o aws_icons_2023/Backup.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/AWS-Backup.png)
-          curl -L -o aws_icons_2023/Certificate-Manager.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/AWS-Certificate-Manager.png)
-          curl -L -o aws_icons_2023/Transit-Gateway.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Transit-Gateway.png)
-          curl -L -o aws_icons_2023/Firewall-Manager.png [d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Firewall-Manager.png)
-          echo "Verify downloaded files:" && ls -1 aws_icons_2023
+          curl -L -o aws_icons_2023/API-Gateway.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/API-Gateway.png)"
+          curl -L -o aws_icons_2023/Application-Load-Balancer.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Application-Load-Balancer.png)"
+          curl -L -o aws_icons_2023/ECS.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Elastic-Container-Service.png)"
+          curl -L -o aws_icons_2023/RDS-PostgreSQL.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Amazon-RDS-Instance.png)"
+          curl -L -o aws_icons_2023/ElastiCache-Redis.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Amazon-ElastiCache.png)"
+          curl -L -o aws_icons_2023/S3.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Amazon-S3.png)"
+          curl -L -o aws_icons_2023/WAF.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/AWS-WAF.png)"
+          curl -L -o aws_icons_2023/ECR.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Elastic-Container-Registry.png)"
+          curl -L -o aws_icons_2023/Secrets-Manager.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Secrets-Manager.png)"
+          curl -L -o aws_icons_2023/Systems-Manager-Parameter-Store.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Systems-Manager-Parameter-Store.png)"
+          curl -L -o aws_icons_2023/CloudWatch.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/CloudWatch.png)"
+          curl -L -o aws_icons_2023/Backup.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/AWS-Backup.png)"
+          curl -L -o aws_icons_2023/Certificate-Manager.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/AWS-Certificate-Manager.png)"
+          curl -L -o aws_icons_2023/Transit-Gateway.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Transit-Gateway.png)"
+          curl -L -o aws_icons_2023/Firewall-Manager.png "[d1.awsstatic.com](https://d1.awsstatic.com/webteam/architecture-icons/Q4-2023/Architecture-Service-Icons_07312023/Firewall-Manager.png)"
+          echo "✅ Icons downloaded:" && ls -1 aws_icons_2023
+
 
       # --- Run the PowerPoint builder ---
       - name: Run PowerPoint builder
